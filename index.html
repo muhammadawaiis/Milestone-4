@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editable Resume Builder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <form id="resume-form">
+            <h2>Fill Out Your Resume Details</h2>
+            <!-- Personal Information -->
+            <h3>Personal Information</h3>
+            <input type="text" id="name" placeholder="Full Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="text" id="phone" placeholder="Phone" required>
+            
+            <!-- Education -->
+            <h3>Education</h3>
+            <input type="text" id="degree" placeholder="Degree" required>
+            <input type="text" id="school" placeholder="School Name" required>
+            <input type="text" id="gradYear" placeholder="Graduation Year" required>
+            
+            <!-- Work Experience -->
+            <h3>Work Experience</h3>
+            <textarea id="experience" placeholder="Describe your work experience..." required></textarea>
+            
+            <!-- Skills -->
+            <h3>Skills</h3>
+            <input type="text" id="skills" placeholder="List your skills, separated by commas" required>
+            
+            <!-- Submit Button -->
+            <button type="submit">Generate Resume</button>
+        </form>
+    </div>
+
+    <div class="resume-container">
+        <h2>Your Editable Resume</h2>
+        <section id="dynamic-resume">
+            <!-- The dynamically generated resume will appear here -->
+        </section>
+        <!-- Print Button -->
+        <button id="print-button" style="display:none;">Print Resume</button>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

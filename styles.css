@@ -1,0 +1,174 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f9;
+    color: #333;
+}
+
+h2, h3 {
+    margin: 0;
+    padding: 10px 0;
+    font-weight: 600;
+    color: #004d99;
+}
+
+h3 {
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 5px;
+}
+
+/* Form Container */
+.form-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: 20px auto;
+    transition: box-shadow 0.3s ease;
+}
+
+.form-container:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #004d99;
+    outline: none;
+}
+
+input[type="submit"] {
+    background-color: #004d99;
+    color: #ffffff;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #003b7a;
+}
+
+/* Resume Container */
+.resume-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: 20px auto;
+    transition: box-shadow 0.3s ease;
+}
+
+.resume-container:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.resume-container h2 {
+    margin-bottom: 15px;
+}
+
+.resume-container [contenteditable] {
+    outline: none;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.resume-container [contenteditable]:focus {
+    border-color: #004d99;
+    box-shadow: 0 0 5px rgba(0, 77, 153, 0.2);
+}
+
+/* Print Button */
+#print-button {
+    background-color: #28a745;
+    color: #ffffff;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#print-button:hover {
+    background-color: #218838;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .form-container, .resume-container {
+        padding: 15px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        font-size: 14px;
+    }
+
+    input[type="submit"],
+    #print-button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    /* Hide form and buttons when printing */
+    .form-container,
+    #print-button {
+        display: none;
+    }
+
+    /* Style the resume for printing */
+    .resume-container {
+        width: 100%;
+        box-shadow: none;
+    }
+
+    body {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+    h2, h3 {
+        color: #000000;
+    }
+
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    p, li {
+        font-size: 1rem;
+    }
+}
